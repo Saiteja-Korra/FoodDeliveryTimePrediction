@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.main {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.786), rgba(255, 166, 0, 0.814)), url('https://img.freepik.com/premium-photo/3d-cartoon-courier-riding-motorcycle-deliver-package-ai-technology-generated-image_1112-12458.jpg?w=2000');
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.input-group{
+  margin-bottom: 20px;
+  position: relative;
+}
+
+input{
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 2px solid lightcyan;
+  color: lightcyan;
+  background: transparent;
+  font-size: 15px;
+}
+
+label {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  color: lightcyan;
+  cursor: text;
+  transition: 0.2s all;
+}
+
+button {
+  padding: 10px 0;
+  color: lightcyan;
+  outline: none;
+  background: transparent;
+  border: 2px solid lightcyan;
+  width: 100%;
+  cursor: pointer;
+  font-size: medium;
+  font-weight: bold;
+}
+
+input:focus ~ label,
+input:valid ~ label,
+select:focus ~ label,
+select:valid ~ label {
+  top: -25px;
+  font-size: 12px;
+}
+
+h1 {
+  color: lightcyan;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h3 {
+  margin: 3%;
+  color: lightcyan;
+  text-align: center;
+}
+
+#Loc,#Na,#Cui{
+  color: black;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 2px solid lightcyan;
+  color: lightcyan;
+  background: transparent;
+  font-size: 15px;
+  appearance: none; 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+}
+
+
+.select-wrapper::after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: lightcyan;
+}
+
+@media screen and (max-width: 768px) {
+  .main{
+      background-size: cover;
+  }
+  form {
+    padding: 20px 10px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  label {
+    padding: 5px;
+  }
+
+  button {
+    font-size: small;
+  }
+}
+
+
+
+
+
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .main {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.786), rgba(255, 166, 0, 0.814)), url('https://img.freepik.com/premium-photo/3d-cartoon-courier-riding-motorcycle-deliver-package-ai-technology-generated-image_1112-12458.jpg?w=2000');
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  form {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .input-group{
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  #Loc,#Na,#Cui{
+    color: black;
+  }
+  
+  input{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 2px solid lightcyan;
+    color: lightcyan;
+    background: transparent;
+    font-size: 15px;
+  }
+  
+  label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: lightcyan;
+    cursor: text;
+    transition: 0.2s;
+  }
+  
+  button {
+    padding: 10px 0;
+    color: lightcyan;
+    outline: none;
+    background: transparent;
+    border: 2px solid lightcyan;
+    width: 100%;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: bold;
+  }
+  
+  input:focus ~ label,
+  input:valid ~ label{
+    top: -25px;
+    font-size: 12px;
+  }
+  
+  h1 {
+    color: lightcyan;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  h3 {
+    margin: 3%;
+    color: lightcyan;
+    text-align: center;
+  }
+
+  .svg-drop-down {
+    width: 18px;
+    position: relative;
+    top: 28px;
+    right: 188px;
+}
+
+  select {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 2px solid lightcyan;
+    color: lightcyan;
+    background: transparent;
+    font-size: 15px;
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+  }
+  
+ 
+  .select-wrapper::after {
+    content: '\25BC'; 
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: lightcyan;
+    pointer-events: none;
+  }
+  
+  
+  select:focus + label::after {
+    content: '\25B2'; 
+  }
+  
+
+  select:focus + label{
+    top: -35px;
+    font-size: 14px;
+  }
+  
+
+  select:valid + label{
+    top: -35px;
+    font-size: 14px;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .main{
+        background-size: cover;
+    }
+    form {
+      padding: 20px 10px;
+    }
+  
+    input {
+      font-size: 14px;
+    }
+  
+    label {
+      padding: 5px;
+    }
+  
+    button {
+      font-size: small;
+    }
+  }
+   */

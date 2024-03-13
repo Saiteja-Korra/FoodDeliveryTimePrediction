@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery Time Prediction</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://kit.fontawesome.com/0785ec6577.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="main">
+    
+    <form method="post" action="predict">
+      <h1>Forecasting Food Delivery Time</h1>
+      <!-- <div class="input-group">
+        <input type="text" name="name" id="name" required>
+        <label for="name"><i class="fa-solid fa-hotel"></i> Restaurant Name</label>
+      </div> -->
+    
+   <div class="input-group">
+    
+    <select name="name" id="restaurant" required>
+        <!-- <option value="" disabled selected hidden class="N">Restaurant Name</option> -->
+        {% for restaurant in names %}
+            <option  value="{{ restaurant }}" id="Na">{{ restaurant }}</option>
+        {% endfor %}
+    </select>
+    <label for="name"><i class="fa-solid fa-hotel"></i> Restaurant Name</label>
+  </div>
+      <!-- <div class="input-group">
+        <input type="text" name="location" id="location" required>
+        <label for="location"><i class="fa-solid fa-location-dot"></i> Location</label>
+      </div> -->
+      <div class="input-group">
+        
+        <select name="location" id="location" required>
+          {% for location in options %}
+            <option  value="{{ location }}" id="Loc">{{ location }}</option>
+          {% endfor %}
+        </select>
+        <label for="location"><i class="fa-solid fa-location-dot"></i> Location</label>
+      </div>
+      
+      <div class="input-group">
+        
+        <select name="cuisine" id="cuisine" required>
+          {% for cui in cuisines %}
+            <option value="{{ cui }}" id="Cui">{{ cui }}</option>
+          {% endfor %}
+        </select>
+        <label for="cuisine"><i class="fa-solid fa-bell-concierge"></i> Cuisine</label>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var selectElement = document.getElementById("restaurant");
+            selectElement.selectedIndex = -1; // Deselect any default option
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            var selectElement = document.getElementById("location");
+            selectElement.selectedIndex = -1; // Deselect any default option
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            var selectElement = document.getElementById("cuisine");
+            selectElement.selectedIndex = -1; // Deselect any default option
+        });
+      </script>
+      <div class="input-group">
+        <input type="number" step="0.1" name="rating" d="rating" required>
+        <label for="rating"><i class="fa-solid fa-star"></i> Rating (on the scale of 5)</label>
+      </div>
+
+      <div class="input-group">
+        <input type="number" step="50" name="minorder" id="minorder" required>
+        <label for="minorder"><i class="fa-solid fa-indian-rupee-sign"></i> Minimum Order Cost</label>
+      </div>
+
+      <button type="submit" id="predict">PREDICT  <i class="fa-solid fa-truck-fast"></i></button>
+
+      <h3><i class="fa-regular fa-clock fa-flip"></i> {{predicted_time}} <i class="fa-regular fa-clock fa-flip"></i></h3>
+      
+    </form>
+
+  </div>
+
+
+</body>
+</html>
